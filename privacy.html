@@ -4,126 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プライバシーポリシー - SimpleShotChart</title>
+    <link rel="icon" type="image/png" href="/icon.png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        :root {
+            --accent: #FF9933;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border: #e9ecef;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
-            color: #333;
-            background: #f5f5f5;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
         }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
+
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .header .updated {
-            opacity: 0.8;
-            font-size: 14px;
+
+        .header-content img {
+            width: 32px;
+            height: 32px;
+            border-radius: 7px;
         }
+
+        .header-content a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
         }
+
         .content {
-            background: white;
+            background: var(--bg-primary);
             border-radius: 12px;
             padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
         }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .updated {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
         h2 {
-            font-size: 20px;
-            color: #333;
+            font-size: 18px;
+            color: var(--text-primary);
             margin-top: 40px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
         }
-        h2:first-child {
+
+        h2:first-of-type {
             margin-top: 0;
         }
+
         h3 {
-            font-size: 16px;
-            color: #555;
-            margin-top: 25px;
-            margin-bottom: 10px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            margin-bottom: 12px;
         }
+
         p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
+
         ul, ol {
-            margin-bottom: 15px;
-            padding-left: 25px;
+            margin-bottom: 16px;
+            padding-left: 24px;
         }
+
         li {
             margin-bottom: 8px;
         }
+
         .intro {
-            background: #f0f0ff;
+            background: var(--bg-secondary);
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border);
         }
+
+        .intro p {
+            margin-bottom: 0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            font-size: 14px;
+            min-width: 500px;
         }
+
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid var(--border);
             padding: 12px;
             text-align: left;
         }
+
         th {
-            background: #f5f5f5;
+            background: var(--bg-secondary);
             font-weight: 600;
         }
+
+        .url-list {
+            word-break: break-all;
+        }
+
+        .url-list a {
+            word-break: break-all;
+        }
+
         .back-link {
             display: inline-block;
-            margin-top: 30px;
-            color: #667eea;
+            margin-top: 32px;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
         }
+
         .back-link:hover {
             text-decoration: underline;
         }
+
         .revision {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #666;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
             font-size: 14px;
         }
+
+        .revision h3 {
+            color: var(--text-secondary);
+            margin-top: 0;
+        }
+
         footer {
             text-align: center;
-            padding: 30px;
-            color: #666;
-            font-size: 14px;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 13px;
         }
+
         a {
-            color: #667eea;
+            color: inherit;
+        }
+
+        @media (max-width: 640px) {
+            .content {
+                padding: 24px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🔒 プライバシーポリシー</h1>
-        <p class="updated">最終更新日：2026年1月3日</p>
-    </div>
+    <header>
+        <div class="header-content">
+            <a href="/">
+                <img src="/icon.png" alt="SimpleShotChart">
+                <span>SimpleShotChart</span>
+            </a>
+        </div>
+    </header>
 
     <div class="container">
         <div class="content">
+            <h1 class="page-title">プライバシーポリシー</h1>
+            <p class="updated">最終更新日：2026年1月3日</p>
+
             <div class="intro">
                 <p>SimpleShotChart開発チーム（以下「当チーム」）は、バスケットボールショット記録アプリ「SimpleShotChart」（以下「本アプリ」）におけるユーザーの個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
             </div>
@@ -168,58 +275,60 @@
             <h2>4. 利用する外部サービス</h2>
             <p>本アプリでは、以下の外部サービスを利用しています。各サービスにおける情報の取り扱いについては、それぞれのプライバシーポリシーをご確認ください。</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>サービス名</th>
-                        <th>提供元</th>
-                        <th>利用目的</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Firebase Authentication</td>
-                        <td>Google LLC</td>
-                        <td>ユーザー認証</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Firestore</td>
-                        <td>Google LLC</td>
-                        <td>データの保存・同期</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Analytics</td>
-                        <td>Google LLC</td>
-                        <td>利用状況の分析</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase App Check</td>
-                        <td>Google LLC</td>
-                        <td>不正アクセスの防止</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Crashlytics</td>
-                        <td>Google LLC</td>
-                        <td>クラッシュレポートの収集</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft Clarity</td>
-                        <td>Microsoft Corporation</td>
-                        <td>ユーザー行動の分析</td>
-                    </tr>
-                    <tr>
-                        <td>StoreKit</td>
-                        <td>Apple Inc.</td>
-                        <td>アプリ内課金の処理</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス名</th>
+                            <th>提供元</th>
+                            <th>利用目的</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Firebase Authentication</td>
+                            <td>Google LLC</td>
+                            <td>ユーザー認証</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Firestore</td>
+                            <td>Google LLC</td>
+                            <td>データの保存・同期</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Analytics</td>
+                            <td>Google LLC</td>
+                            <td>利用状況の分析</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase App Check</td>
+                            <td>Google LLC</td>
+                            <td>不正アクセスの防止</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Crashlytics</td>
+                            <td>Google LLC</td>
+                            <td>クラッシュレポートの収集</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Clarity</td>
+                            <td>Microsoft Corporation</td>
+                            <td>ユーザー行動の分析</td>
+                        </tr>
+                        <tr>
+                            <td>StoreKit</td>
+                            <td>Apple Inc.</td>
+                            <td>アプリ内課金の処理</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <p><strong>外部サービスのプライバシーポリシー</strong></p>
-            <ul>
-                <li>Google：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-                <li>Microsoft：<a href="https://privacy.microsoft.com/privacystatement" target="_blank">https://privacy.microsoft.com/privacystatement</a></li>
-                <li>Apple：<a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+            <ul class="url-list">
+                <li>Google：<a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+                <li>Microsoft：<a href="https://privacy.microsoft.com/privacystatement" target="_blank">privacy.microsoft.com/privacystatement</a></li>
+                <li>Apple：<a href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a></li>
             </ul>
 
             <h2>5. データの保管</h2>
@@ -258,7 +367,7 @@
     </div>
 
     <footer>
-        &copy; 2026 SimpleShotChart. All rights reserved.
+        &copy; 2026 SimpleShotChart
     </footer>
 </body>
 </html>
