@@ -4,100 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimpleShotChart - バスケットボールシュート記録アプリ</title>
+    <link rel="icon" type="image/png" href="/icon.png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        :root {
+            --accent: #FF9933;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border: #e9ecef;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-primary);
+            background: var(--bg-secondary);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
         }
+
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             text-align: center;
+            max-width: 400px;
         }
-        .logo {
-            font-size: 80px;
-            margin-bottom: 20px;
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
+
         .tagline {
-            color: #666;
-            margin-bottom: 40px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
         }
+
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
+            margin-bottom: 32px;
         }
+
         .links a {
             display: block;
-            padding: 15px 20px;
-            background: #f5f5f5;
+            padding: 14px 20px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
             border-radius: 10px;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: background 0.2s;
+            color: var(--text-primary);
+            font-size: 15px;
+            transition: border-color 0.2s;
         }
+
         .links a:hover {
-            background: #e0e0e0;
+            border-color: var(--accent);
         }
-        .app-store {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-        }
+
         .app-store-badge {
-            height: 50px;
+            height: 48px;
+            transition: opacity 0.2s;
         }
-        footer {
-            margin-top: 30px;
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-            text-align: center;
+
+        .app-store-badge:hover {
+            opacity: 0.8;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--text-secondary);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <div class="logo">🏀</div>
-            <h1>SimpleShotChart</h1>
-            <p class="tagline">バスケットボールシュート記録アプリ</p>
+        <img src="/icon.png" alt="SimpleShotChart" class="icon">
+        <h1>SimpleShotChart</h1>
+        <p class="tagline">バスケットボールシュート記録アプリ</p>
 
-            <div class="links">
-                <a href="/terms">📄 利用規約</a>
-                <a href="/privacy">🔒 プライバシーポリシー</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfp4aYaarfqCeBt0AP3ovwxEB88Z7SUU533TYO9ES6LpIJI5Q/viewform" target="_blank">📧 お問い合わせ</a>
-            </div>
-
-            <div class="app-store">
-                <a href="https://apps.apple.com/app/simpleshotchart/id6740097042" target="_blank">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
-                </a>
-            </div>
+        <div class="links">
+            <a href="/terms">利用規約</a>
+            <a href="/privacy">プライバシーポリシー</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfp4aYaarfqCeBt0AP3ovwxEB88Z7SUU533TYO9ES6LpIJI5Q/viewform" target="_blank">お問い合わせ</a>
         </div>
-        <footer>
-            &copy; 2026 SimpleShotChart. All rights reserved.
-        </footer>
+
+        <a href="https://apps.apple.com/app/simpleshotchart/id6740097042" target="_blank">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+        </a>
+
+        <p class="copyright">&copy; 2026 SimpleShotChart</p>
     </div>
 </body>
 </html>
