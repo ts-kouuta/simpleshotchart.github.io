@@ -99,6 +99,37 @@
             opacity: 0.8;
         }
 
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .social a:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .social svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
         .copyright {
             margin-top: 40px;
             font-size: 12px;
@@ -121,6 +152,15 @@
         <a href="https://apps.apple.com/jp/app/simpleshotchart/id6755348831" target="_blank">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
         </a>
+
+        <div class="social">
+            <a href="https://instagram.com/simpleshotchart" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2m-.25 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9m9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6"/></svg>
+            </a>
+            <a href="https://x.com/simpleshotchart" target="_blank" aria-label="X">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.205 2.25h3.308l-7.227 8.26 8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
+            </a>
+        </div>
 
         <p class="copyright">&copy; 2026 SimpleShotChart</p>
     </div>
